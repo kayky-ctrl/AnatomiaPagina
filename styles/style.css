@@ -140,6 +140,7 @@ main h4 {
     text-align: center;
     font-weight: 600;
     color: #4b5563;
+    position: relative;
 }
 
 .diagram-content {
