@@ -176,6 +176,79 @@ video {
     align-items: center;
 }
 
+/* Estilo dos fieldsets */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0; /* Remove margem padrão do fieldset */
+}
+
+/* Estilo da legenda do fieldset */
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+    margin-left: -10px; /* Ajusta a posição da legenda */
+}
+
+/* Estilo dos rótulos (labels) */
+label {
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Estilo dos inputs de texto, data e select */
+input[type="text"],
+input[type="date"],
+select {
+    width: calc(100% - 20px); /* Largura total menos padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+/* Estilo para os radio buttons e checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle; /* Alinha o input com o texto */
+}
+
+/* Estilo para os labels associados a radio/checkbox para melhor espaçamento */
+label[for="experiência"],
+label[for="tecnologias"] {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Estilo específico para o espaçamento dos radios e checkboxes */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal; /* Para que o texto não seja bold */
+}
+
+/* Quebras de linha para melhor organização (se necessário) */
+br {
+    display: none; /* Geralmente controlamos o espaçamento com CSS em vez de <br> */
+}
+
+/* Ajustes para a lista de datalist (não visível diretamente, mas o input se adapta) */
+datalist option {
+    font-size: 1em;
+}
+
 @media (min-width: 768px) {
     video {
         width: 100%;

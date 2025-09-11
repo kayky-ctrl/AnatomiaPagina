@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anatomia</title>
+    <link rel="stylesheet" href="styles/style2.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1 style="color: rgb(3, 143, 96)">Anatomia de uma página HTML5</h1>
+        <p style="color: gray">Parte 2: Formularios e Texto</p>
+      </div>
+      <nav>
+        <a href="#formularios">Formularios</a>
+        <a href="index.html">Voltar</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="card">
+        <h2>Aprofundando o Conhecimento</h2>
+        <p>
+          Nesta segunda parte, exploramos tags essenciais para a criação de
+          interatividade (formulários) e para dar um significado ainda mais rico
+          ao conteúdo textual
+        </p>
+      </div>
+
+      <section id="formularios">
+        <h3 class="h3">Formulários: Coletando dados</h3>
+        <div class="form-layout">
+          <div class="card">
+            <form action="#" method="post">
+              <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <label for="nome_completo">Nome Completo:</label>
+                <input
+                  type="text"
+                  id="nome_completo"
+                  name="nome_completo"
+                  placeholder="Ex: Ana Silva"
+                  required
+                />
+
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input
+                  type="date"
+                  id="data_nascimento"
+                  name="data_nascimento"
+                  required
+                />
+
+                <label for="curso_interesse"
+                  >Curso de Interesse (com autocompletar):</label
+                >
+                <input
+                  list="cursos_lista"
+                  id="curso_interesse"
+                  name="curso_interesse"
+                  placeholder="Digite para buscar..."
+                  required
+                />
+                <datalist id="cursos_lista">
+                  <option value="Ciência da Computação"></option>
+                  <option value="Engenharia de Software"></option>
+                  <option value="Design Gráfico"></option>
+                  <option value="Marketing Digital"></option>
+                  <option
+                    value="Análise e Desenvolvimento de Sistemas"
+                  ></option>
+                </datalist>
+              </fieldset>
+
+              <fieldset>
+                <legend>Preferências</legend>
+
+                <label for="area_foco"
+                  >Área de Foco (com lista dropdown):</label
+                >
+                <select id="area_foco" name="area_foco" required>
+                  <option value="" disabled selected>
+                    Selecione uma opção
+                  </option>
+                  <option value="frontend">Desenvolvimento Front-end</option>
+                  <option value="backend">Desenvolvimento Back-end</option>
+                  <option value="fullstack">Desenvolvimento Full-stack</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                </select>
+
+                <div class="radio-group">
+                  <span class="radio-group-title">Nível de Experiência:</span>
+                  <div>
+                    <input
+                      type="radio"
+                      id="iniciante"
+                      name="experiencia"
+                      value="iniciante"
+                      checked
+                    />
+                    <label for="iniciante">Iniciante</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="intermediario"
+                      name="experiencia"
+                      value="intermediario"
+                    />
+                    <label for="intermediario">Intermediário</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="avancado"
+                      name="experiencia"
+                      value="avancado"
+                    />
+                    <label for="avancado">Avançado</label>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="card-tag-highlight">
+            <p>
+              O formulário agora combina múltiplos elementos:
+              <code>&lt;datalist&gt;</code> para autocompletar, e
+              <code>&lt;select&gt;</code> para uma lista fechada de opções.
+            </p>
+            <p>
+              Para escolhas, usamos
+              <code>&lt;input type="radio"&gt;</code> (escolha única) e
+              <code>&lt;input type="checkbox"&gt;</code>
+              (múltipla escolha).
+            </p>
+            <p>
+              A tag <code>&lt;output&gt;</code> exibe dinamicamente o valor do
+              <code>&lt;input type="range"&gt;</code>, criando uma experiência
+              interativa.
+            </p>
+            <p>
+              Note também os atributos <code>placeholder</code>, que exibe um
+              texto de ajuda no campo, e <code>required</code>, que torna seu
+              preenchimento obrigatório.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
