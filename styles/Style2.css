@@ -144,3 +144,31 @@ main h2 {
     padding: 1rem;
     border-radius: 0.25rem;
 }
+
+.form-label{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #111827;
+}
+
+  
+  .form-layout button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1f2937;
+    color: #d1d5db;
+    margin-top: 3rem;
+}

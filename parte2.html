@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anatomia</title>
-    <link rel="stylesheet" href="styles/style2.css" />
+    <link rel="stylesheet" href="styles/Style2.css" />
   </head>
 
   <body>
@@ -61,7 +61,6 @@
                   list="cursos_lista"
                   id="curso_interesse"
                   name="curso_interesse"
-                  placeholder="Digite para buscar..."
                   required
                 />
                 <datalist id="cursos_lista">
@@ -123,6 +122,35 @@
                   </div>
                 </div>
               </fieldset>
+
+              <fieldset class="feedback">
+                <legend>Feedback</legend>
+
+                <label for="satisfacao"
+                  >Nível de Satisfação com o Curso(0 a 100):</label
+                >
+                <input
+                  type="range"
+                  id="satisfacao"
+                  name="satisfacao"
+                  min="0"
+                  max="100"
+                  value="50"
+                  oninput="satisfacao_output.value = satisfacao.value"
+                />
+                <div class="fed">
+                  <output id="satisfacao_output">50</output>
+                </div>
+                <label for="comentarios">Comentários Adicionais:</label>
+                <textarea
+                  id="comentarios"
+                  name="comentarios"
+                  rows="4"
+                  placeholder="Deixe seus comentários aqui..."
+                ></textarea>
+              </fieldset>
+
+              <button type="submit">Enviar inscrição</button>
             </form>
           </div>
           <div class="card-tag-highlight">
@@ -150,6 +178,79 @@
           </div>
         </div>
       </section>
+
+      <section id="texto-avancado">
+        <h3 class="section-title">Semântica de Texto Específica</h3>
+        <div class="card tag-highlight">
+          <div class="text-content">
+            <p>
+              Nesta seção, exploramos como dar mais significado a palavras
+              específicas. Por exemplo,
+              <dfn>HTML5</dfn> é a quinta versão da
+              <abbr title="HyperText Markup Language">HTML</abbr>. Ela foi
+              oficialmente lançada em
+              <time datetime="2014-10-28">28 de outubro de 2014</time>. Uma de
+              suas principais novidades foi
+              <mark>a introdução de tags semânticas</mark>
+              , que revolucionaram a forma como estruturamos documentos para a
+              web.
+            </p>
+
+            <div class="divider">
+              <p>
+                Para contextos científicos ou matemáticos, usamos
+                <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>. Por
+                exemplo, a fórmula da água é H<sub>2</sub>O e 2<sup>10</sup> é
+                1024.
+              </p>
+            </div>
+
+            <div class="divider">
+              <p>
+                Para conteúdo técnico, temos um trio poderoso. Para salvar um
+                arquivo, digite <kbd>Ctrl</kbd> + <kbd>S</kbd>. O comando a
+                seguir, <code>git commit</code>, é essencial.
+              </p>
+              <p>
+                Para blocos de código maiores, combinamos
+                <code>&lt;pre&gt;</code> com <code>&lt;code&gt;</code>:
+              </p>
+              <pre><code class="language-js">function helloWorld() {
+console.log("Olá, mundo!");
+}</code></pre>
+            </div>
+
+            <div class="divider divider-list">
+              <p>
+                <code>&lt;dfn&gt;</code>, <code>&lt;abbr&gt;</code>,
+                <code>&lt;time&gt;</code>, <code>&lt;mark&gt;</code>: Dão
+                significado contextual a palavras e frases.
+              </p>
+              <p>
+                <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>: Para
+                fórmulas, notas de rodapé e expressões matemáticas.
+              </p>
+              <p>
+                <code>&lt;kbd&gt;</code>: Estiliza o texto para parecer uma
+                tecla, indicando uma ação do usuário.
+              </p>
+              <p>
+                <code>&lt;code&gt;</code>: Para nomes de funções ou pequenos
+                comandos.
+              </p>
+              <p>
+                <code>&lt;pre&gt;</code>: Essencial para exibir blocos de código
+                sem que o navegador colapse os espaços.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <p>Página construída como um projeto de estudo sobre HTML5 Semântico.</p>
+      <p>&copy; 2025. Todos os direitos reservados.</p>
+    </footer>
   </body>
 </html>
